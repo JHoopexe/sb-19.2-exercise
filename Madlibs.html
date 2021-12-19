@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs</title>
+</head>
+<body>
+    <h1>Madlibs</h1>
+    <form action="/story" method="GET">
+        <label>place:</label>
+        <input type="text" name="place" id="place">
+        <label>noun:</label>
+        <input type="text" name="noun" id="noun"> 
+        <label>verb:</label>
+        <input type="text" name="verb" id="verb">
+        <label>adjective:</label>
+        <input type="text" name="adjective" id="adjective">
+        <label>plural_noun:</label>
+        <input type="text" name="plural_noun" id="plural_noun">
+        <button type="submit">Submit</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        place = $("#place");
+        noun = $("#noun");
+        verb = $("#verb");
+        adjective = $("#adjective");
+        plural_noun = $("#plural_noun");
+
+        $("form").on("submit",function(){
+            if(place.val() == ''){
+                place.val("place");
+            }
+
+            if(noun.val() == ''){
+                noun.val("noun");
+            }
+
+            if(verb.val() == ''){
+                verb.val("verb");
+            }
+
+            if(adjective.val() == ''){
+                adjective.val("adjective");
+            }
+            
+            if(plural_noun.val() == ''){
+                plural_noun.val("plural_noun");
+            }
+        });
+    </script>
+</body>
+</html>
